@@ -1,0 +1,17 @@
+# Ignore log files
+*.log
+
+# Ignore environment files
+.env
+
+# Ignoring all CSVs
+*.csv
+
+# Ignore all files in the temp directory
+Test files/
+
+# Ignore compiled Python files
+*.pyc
+
+# Ignore all .env files in any directory
+**/.env
