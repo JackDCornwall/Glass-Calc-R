@@ -1,4 +1,4 @@
-# Correlation and PC Analuysis
+# Glass Calc and Composition Generator
 
 Each script and its function are listed below:
 Composition_generator_120624.R -> code that generates many combinations of compositions based on specific inputs and then stores only those that add up to 100. I would kindly like to thank Chat GPT for its help in generating this code as my version was going to take 700,000 years.
