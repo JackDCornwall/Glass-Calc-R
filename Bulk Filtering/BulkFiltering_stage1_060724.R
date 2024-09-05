@@ -17,7 +17,7 @@ source("C://Users/Jack/Documents/University/PhD/Code/Glass Calc R/SM_calc.R")
 source("C://Users/Jack/Documents/University/PhD/Code/Glass Calc R/DC_calc.R")
 
 #importing data in wt%
-comp_wt_temp <- read.csv("valid_combinations_250624.csv")
+comp_wt_temp <- read.csv("valid_combinations_270624.csv")
 #comp_wt_temp <- read.csv("Test_combinations.csv") #smaller file for testing.
 
 #desired output:
@@ -39,13 +39,13 @@ for(i in 1:nrow(comp_wt_temp)){
   
   #Calculating sums and ratios for conditions
   Al2O3_Na2O = comp_wt_temp[i,]$Al2O3/comp_wt_temp[i,]$Na2O
-  Al2O3_SiO2 = comp_wt_temp[i,]$Al2O3/comp_wt_temp[i,]$SiO2
+  Al2O3_SiO2 = comp_wt_temp[i,]$Al2O3/comp_wt_temp[i,]$SiO2 #Nepheline specific
   Alk_sum = comp_wt_temp[i,]$Na2O + comp_wt_temp[i,]$Li2O + comp_wt_temp[i,]$K2O
   
   #checking desired conditions are met (ratios)
   if(
-    Al2O3_Na2O > 1.4 & Al2O3_Na2O < 1.5 &
-    Al2O3_SiO2 > 0.5 & Al2O3_SiO2 < 0.6 &
+    Al2O3_Na2O > 1.5 & Al2O3_Na2O < 1.7 &
+    #Al2O3_SiO2 > 0.5 & Al2O3_SiO2 < 0.6 & #can be removed as Nephe speciofic
     Alk_sum > .15
   ){
     

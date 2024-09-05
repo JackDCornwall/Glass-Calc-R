@@ -44,12 +44,12 @@ for (i in 1:num_samples) {
   #stores a combination that sums to 1 as long as the below conditions are also met:
   if (round(sum(sample_combination), 5) == 1 &&
       ((
-        #Al2O3/Na2O/SiO2 ratio matches that of Nepheline
+        #Al2O3/Na2O/SiO2 ratio matches that of Nepheline wt%
         abs(sample_combination["Al2O3"]/sample_combination["Na2O"] - 1.48851317) <= 1.48851317 * 0.05 &&
         abs(sample_combination["Al2O3"]/sample_combination["SiO2"] - 0.537952011) <= 0.537952011 * 0.05) ||
-        #OR Al2O3/Na2O ratio is equal but this (converted to molar)
-        abs(sample_combination["Al2O3"]/sample_combination["Na2O"] - 1.645095385) <= 1.645095385 * 0.05 ||
-        #OR Al2O3/Na2O ratio is equal to that found in Goel waste stream
+        #OR Al2O3/Na2O ratio is equal to above? but this (converted to molar)  <- not sure here need to revisit
+        #abs(sample_combination["Al2O3"]/sample_combination["Na2O"] - 1.645095385) <= 1.645095385 * 0.05 ||
+        #OR Al2O3/Na2O ratio is equal to that found in Goel waste stream wt%
         abs(sample_combination["Al2O3"]/sample_combination["Na2O"] - 1.678943) <= 1.678943 * 0.05 ||
         #OR Al2O3/Na2O ratio is equal to that found DFHLW feed from late 2023
         abs(sample_combination["Al2O3"]/sample_combination["Na2O"] - 0.391017689) <= 0.391017689 * 0.05
