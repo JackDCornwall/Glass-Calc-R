@@ -26,8 +26,8 @@ ranges <- list(
 )
 
 # Define the number of samples
-#num_samples <- 100000000
-num_samples <- 1000000000
+num_samples <- 100000000
+#num_samples <- 100000
 
 # Create a progress bar
 pb <- txtProgressBar(min = 0, max = num_samples, style = 3)
@@ -43,20 +43,13 @@ for (i in 1:num_samples) {
   
   #stores a combination that sums to 1 as long as the below conditions are also met:
   if (round(sum(sample_combination), 5) == 1 &&
-      ((
-        #Al2O3/Na2O/SiO2 ratio matches that of Nepheline wt%
-        abs(sample_combination["Al2O3"]/sample_combination["Na2O"] - 1.48851317) <= 1.48851317 * 0.05 &&
-        abs(sample_combination["Al2O3"]/sample_combination["SiO2"] - 0.537952011) <= 0.537952011 * 0.05) ||
-        #OR Al2O3/Na2O ratio is equal to above? but this (converted to molar)  <- not sure here need to revisit
-        #abs(sample_combination["Al2O3"]/sample_combination["Na2O"] - 1.645095385) <= 1.645095385 * 0.05 ||
-        #OR Al2O3/Na2O ratio is equal to that found in Goel waste stream wt%
-        abs(sample_combination["Al2O3"]/sample_combination["Na2O"] - 1.678943) <= 1.678943 * 0.05 ||
-        #OR Al2O3/Na2O ratio is equal to that found DFHLW feed from late 2023
-        abs(sample_combination["Al2O3"]/sample_combination["Na2O"] - 0.391017689) <= 0.391017689 * 0.05
-       )) {
+      abs(sample_combination["Al2O3"]/sample_combination["Na2O"] - 1.678943452) <= 1.678943452 * 0.05 #Matches ratio of Goel wt% 
+      ){
     
     # Store the valid combination
     valid_combinations <- append(valid_combinations, list(sample_combination))
+    
+    
   }
   
   # Update the progress bar
@@ -71,4 +64,4 @@ valid_combinations_df <- do.call(rbind, valid_combinations)
 colnames(valid_combinations_df) <- names(ranges)
 
 #storing file
-write.csv(valid_combinations_df, "valid_combinations_280624.csv", row.names = FALSE)
+write.csv(valid_combinations_df, "valid_combinations_050924.csv", row.names = FALSE)
