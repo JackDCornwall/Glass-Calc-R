@@ -26,7 +26,7 @@ ranges <- list(
 )
 
 # Define the number of samples
-num_samples <- 100000000
+num_samples <- 100000000 #good for an overnight run
 #num_samples <- 100000
 
 # Create a progress bar

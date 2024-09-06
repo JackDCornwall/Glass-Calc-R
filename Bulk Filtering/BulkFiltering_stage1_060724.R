@@ -17,7 +17,7 @@ source("C://Users/Jack/Documents/University/PhD/Code/Glass Calc R/SM_calc.R")
 source("C://Users/Jack/Documents/University/PhD/Code/Glass Calc R/DC_calc.R")
 
 #importing data in wt%
-comp_wt_temp <- read.csv("valid_combinations_270624.csv")
+comp_wt_temp <- read.csv("valid_combinations_050924.csv")
 #comp_wt_temp <- read.csv("Test_combinations.csv") #smaller file for testing.
 
 #desired output:
@@ -68,4 +68,4 @@ comp_wt_temp <- t(comp_wt_temp) #transposing
 colnames(comp_wt_temp) <- paste0("wt_",1:ncol(comp_wt_temp))
 
 #Exporting files ready for Glass_Calc R.R
-write.csv(comp_wt_temp, "Stage1_export.csv", row.names = TRUE)
+write.csv(comp_wt_temp, "Stage1_export_050924.csv", row.names = TRUE)
