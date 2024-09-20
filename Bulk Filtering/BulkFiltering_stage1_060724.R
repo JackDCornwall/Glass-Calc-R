@@ -44,7 +44,7 @@ for(i in 1:nrow(comp_wt_temp)){
   
   #checking desired conditions are met (ratios)
   if(
-    Al2O3_Na2O > 1.5 & Al2O3_Na2O < 1.7 &
+    Al2O3_Na2O > 1.678943452-(1.678943452*0.05) & Al2O3_Na2O < 1.678943452+(1.678943452*0.05) &
     #Al2O3_SiO2 > 0.5 & Al2O3_SiO2 < 0.6 & #can be removed as Nephe speciofic
     Alk_sum > .15
   ){

@@ -24,9 +24,8 @@ ranges <- list(
   #SO3 = seq(0, 0.1, by = 0.005),
   TiO2 = seq(0, 0.05, by = 0.0025)
 )
-
 # Define the number of samples
-num_samples <- 100000000 #good for an overnight run
+num_samples <- 1000000000 #good for an overnight run
 #num_samples <- 100000
 
 # Create a progress bar
@@ -64,4 +63,4 @@ valid_combinations_df <- do.call(rbind, valid_combinations)
 colnames(valid_combinations_df) <- names(ranges)
 
 #storing file
-write.csv(valid_combinations_df, "valid_combinations_050924.csv", row.names = FALSE)
+write.csv(valid_combinations_df, "valid_combinations_060924.csv", row.names = FALSE)
