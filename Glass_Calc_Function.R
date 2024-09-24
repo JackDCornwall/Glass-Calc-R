@@ -67,17 +67,21 @@ Glass_calc_func<-function(df){
     #Calculating Submixture model value (SM)
     SM_temp <- SM_calc(comp_wt_temp[, c(1, i+1)])
     
+    #storing submixture model
     SM_opt <- SM_temp$SM_opt
     SM_con <- SM_temp$SM_con
     
+    #normalising submixture model optimised A/B/C values
     A_opt_norm <- SM_opt$A_norm
     B_opt_norm <- SM_opt$B_norm
     C_opt_norm <- SM_opt$C_norm
     
+    #normalising submixture model conservative A/B/C values
     A_con_norm <- SM_con$A_norm
     B_con_norm <- SM_con$B_norm
     C_con_norm <- SM_con$C_norm
     
+    #preparing for storage (calculations made using non normalised values!!!!)
     SM_opt <- SM_temp$SM_opt$P
     SM_con <- SM_temp$SM_con$P
     

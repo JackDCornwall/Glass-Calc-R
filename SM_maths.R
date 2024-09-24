@@ -11,6 +11,7 @@ SM_math <-function(a,b,c,X,Y,Z,U,T_var,V,W,Na2O,CaO,MgO,Li2O,K2O,Al2O3,Fe2O3,SiO
   
   #Calculating P value
   P = -1*(((b*C)+(2*b*B)-(sqrt(3)*C)) / (2*(A+B+C))) -1*((c*(2*B+C)^2) / (4*(A+B+C)^2)) - a
+  #Note calculations are made using non normalised values!!!
   
   #Calculating normalised A B and C values
   A_norm = A / (A+B+C)
