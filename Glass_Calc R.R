@@ -14,6 +14,7 @@ source("C://Users/Jack/Documents/University/PhD/Code/Glass Calc R/Glass_Calc_Fun
 #comp_wt_temp <- read.csv("CCC_data_280424.csv")
 #comp_wt_temp <- read.csv("Test files/Test_file_6_230424_known.csv")
 comp_wt_temp <- read.csv("AAA_temp_to run_file.csv")
+#comp_wt_temp <- read.csv("UG_Glasses_240225.csv")
 #comp_wt_temp <- read.csv("valid_combinations_10000000_t.csv")
 
 #Running glass calc
